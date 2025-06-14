@@ -171,14 +171,11 @@ sudo ./i2c_read
 Again, due to `i2c-stub` limitations, the output will likely be:
 
 ```
-Data read: 0x0
+Data read: 0x7F
 ```
 ---
 
 
 ```
 
----
 
-
-```
