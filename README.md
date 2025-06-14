@@ -1,19 +1,18 @@
 # i2c_riscv32
 
-Here’s a clean and well-formatted `README.md` file for your GitHub project using I²C on a RISC-V Linux VM. It includes explanation, prerequisites, commands, and code.
 
 ---
 
 ````markdown
-# 🧪 I²C Communication in RISC-V Linux VM (with i2c-stub)
+# I²C Communication in RISC-V Linux VM (with i2c-stub)
 
 This project demonstrates how to simulate and interact with an I²C device (at address `0x50`) in a **RISC-V 32-bit Linux VM on Windows**, using the `i2c-stub` kernel module and `i2c-tools`.
 
-> ✅ No real hardware is required. This uses a virtual I²C device emulated in software.
+>  No real hardware is required. This uses a virtual I²C device emulated in software.
 
 ---
 
-## 🧰 Prerequisites
+##  Prerequisites
 
 - A working **RISC-V Linux VM** (running on Windows)
 - `i2c-tools` installed
@@ -22,7 +21,7 @@ This project demonstrates how to simulate and interact with an I²C device (at a
 
 ---
 
-## 🚀 Steps
+##  Steps
 
 ### 1. Boot into your RISC-V Linux VM
 
@@ -100,7 +99,7 @@ Expected output (partial):
 ...
 ```
 
-✅ This confirms that a device at address `0x50` is visible on `/dev/i2c-0`.
+This confirms that a device at address `0x50` is visible on `/dev/i2c-0`.
 
 ---
 
@@ -117,7 +116,7 @@ sudo i2cset -y 0 0x50 0x00 0xAB
 sudo i2cget -y 0 0x50 0x00
 ```
 
-🧪 These commands demonstrate communication with the I²C bus, **but not actual memory behavior** without a full device emulation driver.
+These commands demonstrate communication with the I²C bus, **but not actual memory behavior** without a full device emulation driver.
 
 ---
 
@@ -177,43 +176,17 @@ Data read: 0x0
 
 ---
 
-## 📌 Notes
-
-* This setup is excellent for **learning I²C protocol**, testing code, or **developing drivers**.
-* For meaningful read/write results, a real hardware I²C device or full emulation (like QEMU with I²C-backed EEPROM simulation) is required.
 
 ---
 
-## 📁 Project Structure
 
-```
-.
-├── i2c_read.c        # Optional C program for I²C access
-├── README.md         # You're reading it!
-```
 
 ---
 
-## 💡 Next Steps
 
-* Try adding more virtual devices:
-
-  ```bash
-  sudo modprobe i2c-stub chip_addr=0x50,0x68
-  ```
-* Connect a real I²C sensor via USB-I²C and interact with it from your RISC-V VM
-* Write a Python script using `smbus` or `periphery`
 
 ---
 
-## 🧠 References
-
-* [Linux I²C Documentation](https://www.kernel.org/doc/html/latest/i2c/index.html)
-* `man i2cdetect`, `i2cget`, `i2cset`
-
----
-
-### 🚀 Happy Hacking with I²C on RISC-V!
 
 ```
 
