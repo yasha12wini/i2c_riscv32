@@ -173,9 +173,6 @@ Again, due to `i2c-stub` limitations, the output will likely be:
 ```
 Data read: 0x7F
 ```
----
 
-
-```
 
 
